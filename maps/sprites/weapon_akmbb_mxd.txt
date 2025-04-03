@@ -1,0 +1,4 @@
+3
+weapon			640 m_xd/640hudbakm_b	0	0	170	45
+weapon_s		640 m_xd/640hudbakm_b	0	45	170	45
+ammo			640 m_xd/640hud2	221	24	24	24

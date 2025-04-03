@@ -1,0 +1,20 @@
+version: '3'
+services:
+  cstrike:
+    container_name: cstrike-server-local
+    image: cstrike-server-local:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - PORT=27015
+      - MAP=fy_snow
+      - MAXPLAYERS=16
+      - SV_LAN=0
+    ports:
+      - 27015:27015/udp
+      - 27015:27015
+    volumes:
+      - files/server.cfg:/home/steam/cstrike/cstrike/server.cfg
+      - files/mapcycle.txt:/home/steam/cstrike/cstrike/mapcycle.txt
